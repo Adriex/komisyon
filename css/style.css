@@ -1,0 +1,40 @@
+.wrapper{
+  margin: auto;
+  width: 90%;
+}
+
+.inputs{
+  margin-bottom: 10px;
+  background-color: rgb(157, 211, 219);
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 1px #BABABA;
+  box-shadow: 0 0 5px 1px #BABABA;
+}
+
+.comissions{
+  padding: 10px;
+  padding-right: 0px;
+  background-color: rgb(251, 244, 203); /*Color crema*/
+  background-color: rgb(180, 229, 245);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+}
+
+.hour{
+  padding: 10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  background-color: rgb(207, 237, 247);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.boton{
+  background-color:rgb(130, 165, 255);
+  border: none;
+  color:white;
+}

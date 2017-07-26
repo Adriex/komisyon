@@ -1,0 +1,58 @@
+<html>
+<link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<div class="wrapper row" id="wrapper">
+  <div>
+
+  <!--INGRESO DE DATOS-->
+  <div class="inputs">
+    <!--Nombre de la Materia-->
+    <div class="row">
+      <input id="nameSubject" class="u-full-width" type="text" placeholder="Materia"/>
+    </div>
+
+    <!--Comisiones-->
+    <div>
+      <div class="row comissions">
+        <div class="three columns">
+          <input class="comission" type="text" placeholder="Comision"/>
+        </div>
+
+        <!--Horarios-->
+        <div class="nine columns hour">
+          <div class="row">
+            <div>
+              <div class="four columns"><input class="day u-full-width" type="text" placeholder="Dia"/></div>
+              <div class="four columns"><input class="StartHour u-full-width" type="text" placeholder="Hora de Inicio"/></div>
+              <div class="four columns"><input class="FinishHour u-full-width" type="text" placeholder="Hora de Finalizacion"/></div>
+            </div>
+          </div>
+          <!--Boton Añadir Horario-->
+          <button class="u-full-width addHour boton">Añadir Horario</button>
+        </div>
+      </div>
+    </div>
+    <button class="u-full-width addCommission boton">Añadir Comisión</button>
+  </div>
+</div>
+<button class="u-full-width addSubject boton">Añadir Materia</button>
+</div>
+</html>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/class.js"></script>
+<script src="js/gui.js"></script>
+
+<script>
+
+</script>
+
+<script type="text/javascript">
+var horario1 = new Horario('Martes','11:30','12:30');
+var horarios = {horario1};
+var comision1 = new Comision('Roberto',horarios);
+var comisiones = {comision1}
+var materia1 = new Materia('Informatica',comisiones);
+console.log(materia1.getNombre());
+console.log(materia1.getComisiones());
+</script>
