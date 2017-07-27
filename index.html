@@ -2,8 +2,7 @@
 <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 <div class="wrapper row" id="wrapper">
-  <div>
-
+  <div id="subwrapper">
   <!--INGRESO DE DATOS-->
   <div class="inputs">
     <!--Nombre de la Materia-->
@@ -36,6 +35,7 @@
   </div>
 </div>
 <button class="u-full-width addSubject boton">Añadir Materia</button>
+<button id="execHorarios" class="u-full-width boton">Calcular Posibles Horarios</button>
 </div>
 </html>
 
@@ -44,6 +44,19 @@
 <script src="js/gui.js"></script>
 
 <script>
+
+$(document).on("click","#execHorarios",function(){
+  raiseData();
+});
+
+function raiseData(){
+  $("#subwrapper").children("div[class*='inputs']").each(function(){
+    //Levantar datos de los "inputs"
+    inputNameMateria=$(this).children().children();
+    console.log("puto el que lee")
+    nameMateria=inputNameMateria.val();
+  });
+}
 
 </script>
 

@@ -38,3 +38,12 @@
   border: none;
   color:white;
 }
+
+#execHorarios{
+  background-color: rgb(244, 65, 65);
+}
+
+.highlighted{
+  border-color: red;
+  background-color: red;
+}
