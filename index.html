@@ -59,23 +59,25 @@
 <script>
 
 $(document).on("click","#execHorarios",function(){
-  raiseData();
+  console.log(getAndCreateData());
 });
 
-function raiseData(){
-  //Levantar datos de los "inputs"
+function getAndCreateData(){
+  // Obtiene los datos de los inputs y crea los objetos para su posterior procesado.
+  // Extremadamente ligado a la estructura del HTML, NO CAMBIAR HTML.
+  var materias = [];
+  //  Levantar datos de los "inputs"
   $("#subwrapper").children("div[class*='inputs']").each(function(){
-
     // Levantar nombre de materia
     inputNameMateria=$(this).children("div[class*='nameMateria']").children();
     nameMateria=inputNameMateria.val();
-    console.log("Materia: "+nameMateria);
+    var comisiones = [];
 
     // Recorrer todas las comisiones de la materia
     $(this).children("div[class*='comisiones']").children("div[class*='comissions']").each(function(){
+      var horarios = [];
       inputnameComision=$(this).children("div[class*='nameComision']").children();
       nameComision=inputnameComision.val();
-      console.log("\tComision: "+nameComision);
 
       // Recorrer todas los horarios de la comision
       $(this).children("div[class*='horarios']").children("div[class*='schedules']").each(function(){
@@ -83,13 +85,22 @@ function raiseData(){
           dia=$(this).children("div[class*='four']").children("select[class*='day']").val();
           startHour=$(this).children("div[class*='four']").children("input[class*='startHour']").val();
           finishHour=$(this).children("div[class*='four']").children("input[class*='finishHour']").val();
-          console.log("\t\tDia: "+dia);
-          console.log("\t\tInicio: "+startHour);
-          console.log("\t\tFin: "+finishHour);
+          //Crear objeto horario y ponerlo en el array horarios
+          var horario = new Horario(dia, startHour , finishHour);
+          horarios.push(horario);
         });
       });
+
+      //Crear objeto comision y ponerlo en el array comisiones
+      var comision = new Comision(nameComision,horarios);
+      comisiones.push(comision);
     });
+    //Crear objeto materia y ponerlo en el array materias
+    var materia = new Materia(nameMateria,comisiones);
+    materias.push(materia);
   });
+  // Devolver las materias (Devolver el array de las materias)
+  return materias;
 };
 
 </script>
