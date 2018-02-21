@@ -1,29 +1,42 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
+<div id="header">
+  <img id="logo" src="img/logo.svg" alt="Komisyon" width="100px">
+</div>
 <div class="wrapper row" id="wrapper">
   <div id="subwrapper">
   <!--INGRESO DE DATOS-->
   <div class="inputs">
     <!--Nombre de la Materia-->
-    <div class="row">
-      <input id="nameSubject" class="u-full-width" type="text" placeholder="Materia"/>
+    <div class="row nameMateria">
+      <input id="nameSubject" class="nameSubject u-full-width" type="text" placeholder="Materia"/>
     </div>
 
     <!--Comisiones-->
-    <div>
+    <div class="row comisiones">
       <div class="row comissions">
-        <div class="three columns">
+        <div class="nameComision three columns">
           <input class="comission" type="text" placeholder="Comision"/>
         </div>
 
         <!--Horarios-->
-        <div class="nine columns hour">
-          <div class="row">
-            <div>
-              <div class="four columns"><input class="day u-full-width" type="text" placeholder="Dia"/></div>
-              <div class="four columns"><input class="StartHour u-full-width" type="text" placeholder="Hora de Inicio"/></div>
-              <div class="four columns"><input class="FinishHour u-full-width" type="text" placeholder="Hora de Finalizacion"/></div>
+        <div class="nine columns hour horarios">
+          <div class="row schedules">
+            <div class="row schedule">
+              <div class="four columns">
+                <select class="day u-full-width">
+                  <option value="Default">Dia</option>
+                  <option value="Lunes">Lunes</option>
+                  <option value="Martes">Martes</option>
+                  <option value="Miercoles">Miercoles</option>
+                  <option value="Jueves">Jueves</option>
+                  <option value="Viernes">Viernes</option>
+                  <option value="Sabado">Sabado</option>
+                </select>
+              </div>
+              <div class="four columns"><input class="startHour u-full-width" type="time" placeholder="Hora de Inicio"/></div>
+              <div class="four columns"><input class="finishHour u-full-width" type="time" placeholder="Hora de Finalizacion"/></div>
             </div>
           </div>
           <!--Boton Añadir Horario-->
@@ -35,7 +48,7 @@
   </div>
 </div>
 <button class="u-full-width addSubject boton">Añadir Materia</button>
-<button id="execHorarios" class="u-full-width boton">Calcular Posibles Horarios</button>
+<button id="execHorarios" class="u-full-width boton">Generar Horarios</button>
 </div>
 </html>
 
@@ -50,22 +63,43 @@ $(document).on("click","#execHorarios",function(){
 });
 
 function raiseData(){
+  //Levantar datos de los "inputs"
   $("#subwrapper").children("div[class*='inputs']").each(function(){
-    //Levantar datos de los "inputs"
-    inputNameMateria=$(this).children().children();
-    console.log("puto el que lee")
+
+    // Levantar nombre de materia
+    inputNameMateria=$(this).children("div[class*='nameMateria']").children();
     nameMateria=inputNameMateria.val();
+    console.log("Materia: "+nameMateria);
+
+    // Recorrer todas las comisiones de la materia
+    $(this).children("div[class*='comisiones']").children("div[class*='comissions']").each(function(){
+      inputnameComision=$(this).children("div[class*='nameComision']").children();
+      nameComision=inputnameComision.val();
+      console.log("\tComision: "+nameComision);
+
+      // Recorrer todas los horarios de la comision
+      $(this).children("div[class*='horarios']").children("div[class*='schedules']").each(function(){
+        scheduleInfo=$(this).children("div[class*='schedule']").each(function(){
+          dia=$(this).children("div[class*='four']").children("select[class*='day']").val();
+          startHour=$(this).children("div[class*='four']").children("input[class*='startHour']").val();
+          finishHour=$(this).children("div[class*='four']").children("input[class*='finishHour']").val();
+          console.log("\t\tDia: "+dia);
+          console.log("\t\tInicio: "+startHour);
+          console.log("\t\tFin: "+finishHour);
+        });
+      });
+    });
   });
-}
+};
 
 </script>
 
 <script type="text/javascript">
-var horario1 = new Horario('Martes','11:30','12:30');
-var horarios = {horario1};
-var comision1 = new Comision('Roberto',horarios);
-var comisiones = {comision1}
-var materia1 = new Materia('Informatica',comisiones);
-console.log(materia1.getNombre());
-console.log(materia1.getComisiones());
+// var horario1 = new Horario('Martes','11:30','12:30');
+// var horarios = {horario1};
+// var comision1 = new Comision('Roberto',horarios);
+// var comisiones = {comision1}
+// var materia1 = new Materia('Informatica',comisiones);
+// console.log(materia1.getNombre());
+// console.log(materia1.getComisiones());
 </script>

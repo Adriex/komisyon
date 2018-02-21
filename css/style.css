@@ -1,3 +1,13 @@
+#logo{
+  width: 30%;
+  margin: auto;
+  display: block;
+}
+
+#header{
+  padding: 20px
+}
+
 .wrapper{
   margin: auto;
   width: 90%;

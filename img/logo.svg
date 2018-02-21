@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="58.173252mm"
+   height="10.289153mm"
+   viewBox="0 0 63.990583 11.318068"
+   version="1.1"
+   id="svg378"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="dibujo.svg">
+  <defs
+     id="defs372" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="115.30755"
+     inkscape:cy="25.683456"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     scale-x="1.1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1280"
+     inkscape:window-height="743"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata375">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-58.954391,-47.094499)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="76.973618"
+       y="56.422901"
+       id="text382"><tspan
+         sodipodi:role="line"
+         id="tspan380"
+         x="76.973618"
+         y="56.422901"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-width:0.26458332">Komisyon</tspan></text>
+    <g
+       id="g1372"
+       transform="translate(2.7592261,-1.4363092)">
+      <circle
+         transform="scale(1,-1)"
+         r="2.4722431"
+         cy="-56.799038"
+         cx="63.776985"
+         id="path384"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.26458332" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path386"
+         d="m 58.937489,54.8467 c -0.09556,-0.01165 -0.206581,-0.06334 -0.353983,-0.125055 l -2.059305,-0.891937 c -0.469895,-0.217694 -0.340424,-0.311899 -0.195855,-0.680577 1.382289,-2.811931 4.250893,-4.616948 7.415569,-4.618323 3.164676,0.0014 6.033278,1.806392 7.415567,4.618323 0.144569,0.368678 0.274043,0.462883 -0.195852,0.680577 l -2.059308,0.891937 c -0.393073,0.164581 -0.527116,0.256794 -0.800468,-0.286806 -0.858985,-1.585955 -2.525675,-2.596211 -4.359939,-2.59674 -1.834266,5.29e-4 -3.500956,1.010785 -4.359941,2.59674 -0.170844,0.339752 -0.287224,0.431282 -0.446485,0.411861 z"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.26458332" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path538"
+         d="m 60.789774,55.509576 a 5.4930901,1.6067288 0 0 0 -2.505966,1.34761 5.4930901,1.6067288 0 0 0 2.577462,1.359628 3.2588252,3.2588252 0 0 1 -0.335852,-1.431723 3.2588252,3.2588252 0 0 1 0.264356,-1.275515 z m 5.99545,0.0048 a 3.2588252,3.2588252 0 0 1 0.258348,1.270707 3.2588252,3.2588252 0 0 1 -0.33285,1.429317 5.4930901,1.6067288 0 0 0 2.55944,-1.357223 5.4930901,1.6067288 0 0 0 -2.484938,-1.342801 z"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.36304292" />
+    </g>
+  </g>
+</svg>
